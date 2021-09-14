@@ -1,0 +1,161 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: sans-serif;
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 0 1em;
+	text-align: center;
+}
+
+.nadpis {
+	font-size: 3em;
+}
+
+.sachovnice {
+	position: relative;
+	padding-top: calc(100% - 20px);
+	border: 10px solid #3f2c16;
+	background-color: #ffc98a;
+	border-radius: 6px;
+}
+
+.sachovnice__mrizka {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0.4;
+}
+
+.sachovnice__mrizka::before,
+.sachovnice__mrizka::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: repeating-linear-gradient(
+		to right,
+		#000000 0,
+		#000000 12.5%,
+		#ffffff 12.5%,
+		#ffffff 25%
+	);
+}
+.sachovnice__mrizka::after {
+	background-image: repeating-linear-gradient(
+		to bottom,
+		#ffffff 0,
+		#ffffff 12.5%,
+		#000000 12.5%,
+		#000000 25%
+	);
+	mix-blend-mode: difference;
+}
+
+.sachovnice__policka {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	grid-template-rows: repeat(8, 1fr);
+}
+
+.sachovnice img {
+	width: 100%;
+	height: 100%;
+}
+
+.figurka__1 {
+	grid-area: 8 / 6;
+}
+.figurka__2 {
+	grid-area: 5 / 2;
+}
+.figurka__3 {
+	grid-area: 4 / 4;
+}
+.figurka__4 {
+	grid-area: 6 / 6;
+}
+.figurka__5 {
+	grid-area: 8 / 3;
+}
+.figurka__6 {
+	grid-area: 2 / 1;
+}
+.figurka__7 {
+	grid-area: 3 / 3;
+}
+.figurka__8 {
+	grid-area: 4 / 8;
+}
+.figurka__9 {
+	grid-area: 1 / 5;
+}
+
+.vitez {
+	margin-top: 2em;
+	font-size: 20px;
+}
+
+.znovu {
+	background-color: #007dc1;
+	border-radius: 3px;
+	border: 1px solid #124d77;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 13px;
+	padding: 6px 24px;
+	text-decoration: none;
+}
+
+.hraci {
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 1em;
+}
+
+.hrac {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto 1fr;
+	column-gap: 10px;
+	text-align: left;
+}
+.hrac__avatar {
+	width: 60px;
+	height: 60px;
+	object-fit: cover;
+	border-radius: 6px;
+	grid-row: 1 / -1;
+}
+.hrac__jmeno {
+	margin: 0.4em 0 0;
+	font-size: 1.3em;
+}
+.hrac__barva {
+	color: rgb(48, 48, 48);
+}
+.hrac + .hrac {
+	text-align: right;
+}
+.hrac + .hrac .hrac__avatar {
+	grid-column: 2;
+}
