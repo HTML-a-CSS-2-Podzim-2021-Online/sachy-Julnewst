@@ -27,3 +27,4 @@ Nastyluj stránku podle ukázky níže.
 ## Bonus (dobrovolný)
 
 - Jako obrázek na pozadí šachovnice použij `obrazky/bonus/sachovnice.svg`, který je menší a kvalitnější než `png` varianta.
+

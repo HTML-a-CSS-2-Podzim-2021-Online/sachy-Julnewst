@@ -1,0 +1,156 @@
+html { box-sizing: border-box; }
+*, ::before, :after { box-sizing: inherit; }
+
+:root{
+  max-width: 600px;
+  margin: auto;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: hsl(0, 0%, 90%);
+  padding: 2em;
+}
+
+h1 {
+  font-size: clamp(15px, 6vw, 36px);
+  text-align: center;
+}
+
+.hraci h3 {
+  font-size: clamp(5px, 4vw, 24px);
+}
+
+
+.hraci {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.hrac-cerny, .hrac-bily {
+  display: flex;
+}
+
+.hraci img {
+  width: clamp(5px, 15vw, 90px);
+  height: clamp(5px, 15vw, 90px);
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.hrac-info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hrac-bily .hrac-info {
+  margin-left: clamp(5px, 2vw, 12px);
+}
+
+.hrac-cerny .hrac-info {
+  margin-right: clamp(5px, 2vw, 12px);
+  text-align: right;
+}
+
+.hrac-cerny{
+  flex-direction: row-reverse;
+}
+
+.hraci h3, .hraci p {
+  margin: 0px;
+}
+
+p {
+  font-size: clamp(5px, 2vw, 12px);
+}
+
+.sachovnice {
+  margin: clamp(5px, 3vw, 18px) 0 ;
+  border: 10px solid #392C16;
+  border-radius: 5px;
+  background-image: url(obrazky/sachovnice.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  aspect-ratio: 1/1;
+    
+}
+
+.pole img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.pole {
+  aspect-ratio: 1/1;
+}
+
+.pole:nth-child(1) {
+  grid-column: 5;
+  grid-row: 1;
+}
+
+.pole:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.pole:nth-child(3) {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+.pole:nth-child(4) {
+  grid-column: 4;
+  grid-row: 4;
+}
+
+.pole:nth-child(5) {
+  grid-column: 8;
+  grid-row: 4;
+}
+
+.pole:nth-child(6) {
+  grid-column: 2;
+  grid-row: 5;
+}
+
+.pole:nth-child(7) {
+  grid-column: 6;
+  grid-row: 6;
+}
+
+.pole:nth-child(8) {
+  grid-column: 3;
+  grid-row: 8;
+}
+
+.pole:nth-child(9) {
+  grid-column: 6;
+  grid-row: 8;
+}
+
+.konec-hry {
+  text-align: center;
+}
+
+.konec-hry p {
+  font-size: clamp(8px, 3vw, 18px);
+}
+
+button {
+  font-size: clamp(5px, 2vw, 12px);
+  color: whitesmoke;
+  background-color: #4C7DC0;
+  border-radius: 5px;
+  box-shadow: 2px 2px 7px silver;
+  text-shadow: 2px 2px 7px silver;
+  padding: clamp(3px, 1vw, 6px) clamp(5px, 5vw, 30px);
+}
+
