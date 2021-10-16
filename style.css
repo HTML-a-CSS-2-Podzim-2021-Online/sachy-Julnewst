@@ -1,5 +1,5 @@
 html { box-sizing: border-box; }
-*, ::before, :after { box-sizing: inherit; }
+*, :before, :after { box-sizing: inherit; }
 
 :root{
   max-width: 600px;
@@ -13,18 +13,18 @@ body {
 }
 
 h1 {
-  font-size: clamp(15px, 6vw, 36px);
+  font-size: clamp(20px, 6vw, 36px);
   text-align: center;
 }
 
 .hraci h3 {
-  font-size: clamp(5px, 4vw, 24px);
+  font-size: clamp(12px, 4vw, 24px);
 }
 
 
 .hraci {
   display: flex;
-  width: 100%;
+  
   justify-content: space-between;
 }
 
@@ -33,8 +33,8 @@ h1 {
 }
 
 .hraci img {
-  width: clamp(5px, 15vw, 90px);
-  height: clamp(5px, 15vw, 90px);
+  width: clamp(12px, 15vw, 90px);
+  height: clamp(12px, 15vw, 90px);
   object-fit: cover;
   border-radius: 15px;
 }
@@ -63,7 +63,7 @@ h1 {
 }
 
 p {
-  font-size: clamp(5px, 2vw, 12px);
+  font-size: clamp(12px, 2vw, 12px);
 }
 
 .sachovnice {
@@ -89,6 +89,7 @@ p {
 
 .pole {
   aspect-ratio: 1/1;
+  display: flex;
 }
 
 .pole:nth-child(1) {
@@ -141,11 +142,11 @@ p {
 }
 
 .konec-hry p {
-  font-size: clamp(8px, 3vw, 18px);
+  font-size: clamp(12px, 3vw, 18px);
 }
 
 button {
-  font-size: clamp(5px, 2vw, 12px);
+  font-size: clamp(12px, 2vw, 12px);
   color: whitesmoke;
   background-color: #4C7DC0;
   border-radius: 5px;
